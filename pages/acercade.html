@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="/assets/css/carousel.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-static/">
+<meta name="theme-color" content="#712cf9">
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+  }
+
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
+</style>
+</head>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="/assets/images/peachcat.gif" alt="Logo" width="60" height="48" class="d-inline-block align-text-center">
+        Feliz Aniversario
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/pages/acercade.html">Acerca de nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/porque.html">¿Porque los gatos?</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<body>
+  
+  <br>
+  <main class="container">
+    <div class="row"></div>
+    <div class="row">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" height="500" src="/assets/images/us/6.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" height="500" src="/assets/images/us/8.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" height="500" src="/assets/images/us/10.jpg" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" height="500" src="/assets/images/us/11.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    
+    
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+    
+      <div class="container marketing">
+    
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <h1 class="text-center">Acerca de nosotros</h1>
+          <div class="col-lg-4">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140"  src="/assets/images/us/1.jpg" alt="">
+            <h2 class="fw-normal">Tu Comelona</h2>
+            <p>La comelona de la relacion 😋😋</p>
+            <br>
+            <p>Gracias por estar conmigo amor 😍🥰, espero sigamos juntos por muchos años
+              mas, durante todo ese tiempo tratare de saciar tu hambre.🤭😏</p>
+            
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140"  src="/assets/images/us/3.jpg" alt="">
+            <h2 class="fw-normal">Yo</h2>
+            <p>Alguien asocial, quiza con problemas esquizofrenicos, pero Feliz contigo</p>
+            <br>
+            <p>Y agradecido de tenerte y saber que cuento con tu apoyo. 😍🥰</p>
+            
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140"  src="/assets/images/us/5.jpg" alt="">
+            <h2 class="fw-normal">Un gallo</h2>
+            <p>Personaje principal del anime 😎</p>
+            <br>
+            <p>realmente en el aniversario el no tiene nada que ver pero se ve bien amor 🤭.</p>
+            
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    
+    
+        <!-- START THE FEATURETTES -->
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">La unica imagen de un 28 que tengo. <br><span class="text-body-secondary">Pero de julio de 2019 😞👌.</span></h2>
+            <p class="lead">La verdad que hasta dudo que sea esa la fecha, pero como en el nombre dice 28072019.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+              src="/assets/images/us/7.jpg" alt="" width="250" height="100">
+            
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Me gusta como se te ve el cabello amor.😋😍 </h2>
+            <p class="lead">Ha pasado mucho tiempo🥺, pero ni se siente, lo cual es porque la hemos pasado bien 😍.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+              src="/assets/images/us/11.jpg" alt="" width="500" height="300">
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">“Eres mi apoyo incondicional, siempre estás ahí para mí. Gracias por todo.❤🥺” </h2>
+            <p class="lead">En los momentos difíciles y en los momentos divertidos, tu presencia es mi refugio.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+            src="/assets/images/us/10.jpg" alt="" width="500" height="300">
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+        <div class="row featurette">
+          <div class="col-md-8">
+            <h2 class="featurette-heading fw-normal lh-1">“Eres el motivo de mi sonrisa, te amo más de lo que las palabras pueden expresar. ❤” </h2>
+            <p class="lead">Cada risa , cada abrazo, cada momento juntos, es un tesoro que tengo y no quiero perder amor. ❤🥰</p>
+          </div>
+          <div class="col-md-4">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid " 
+            src="/assets/images/us/9.jpg" alt="" width="250" height="350">
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <!-- /END THE FEATURETTES -->
+    
+      </div><!-- /.container -->
+      
+      <div class="jumbotron">
+        <h1>Y eso es todo amor 😍❤🤭</h1>
+        <p class="lead">Se que dice acerca de nosotros pero no dije mucho amor 🤭😞👌 <br>
+                      pero espero que esta corta descripción y cosas que dije te hayan gustado amor ❤🥰<br>
+                      espero hayas llegado hasta aqui tambien para que lo hayas leido amor 🤭🤭🤭
+        </p>
+        <a class="btn btn-lg btn-primary" href="/index.html" role="button">Volver al inicio</a>
+      </div>
+      <br>
+      <div class="row">
+        <br>
+        <hr class="featurette-divider">
+      </div>
+    </div>
+  
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Regresar al inicio</a></p>
+      <p>© 2018–2024 NezhKmme, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+  </main>
+  <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
