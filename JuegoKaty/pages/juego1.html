@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Carreras</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const carro = {
+            x: canvas.width / 2,
+            y: canvas.height - 30,
+            width: 50,
+            height: 30,
+            speed: 10
+        };
+
+        let obstaculos = [];
+        let monedas = [];
+        let puntuacion = 0;
+
+        function dibujarCarro() {
+            ctx.fillStyle = 'red';
+            ctx.fillRect(carro.x - carro.width / 2, carro.y - carro.height / 2, carro.width, carro.height);
+        }
+
+        function dibujarObstaculos() {
+            ctx.fillStyle = 'green';
+            for (const obstaculo of obstaculos) {
+                ctx.fillRect(obstaculo.x - obstaculo.width / 2, obstaculo.y - obstaculo.height / 2, obstaculo.width, obstaculo.height);
+            }
+        }
+
+        function dibujarMonedas() {
+            ctx.fillStyle = 'yellow';
+            for (const moneda of monedas) {
+                ctx.beginPath();
+                ctx.arc(moneda.x, moneda.y, moneda.radio, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+
+        function actualizarObstaculos() {
+            for (let i = obstaculos.length - 1; i >= 0; i--) {
+                obstaculos[i].x -= 5;
+
+                if (obstaculos[i].x + obstaculos[i].width / 2 < 0) {
+                    obstaculos.splice(i, 1);
+                }
+            }
+        }
+
+        function actualizarMonedas() {
+            for (let i = monedas.length - 1; i >= 0; i--) {
+                monedas[i].x -= 5;
+
+                if (monedas[i].x - monedas[i].radio < 0) {
+                    monedas.splice(i, 1);
+                }
+            }
+        }
+
+        function colision() {
+            for (const obstaculo of obstaculos) {
+                if (
+                    carro.x - carro.width / 2 < obstaculo.x + obstaculo.width / 2 &&
+                    carro.x + carro.width / 2 > obstaculo.x - obstaculo.width / 2 &&
+                    carro.y - carro.height / 2 < obstaculo.y + obstaculo.height / 2 &&
+                    carro.y + carro.height / 2 > obstaculo.y - obstaculo.height / 2
+                ) {
+                    return true;
+                }
+            }
+
+            for (const moneda of monedas) {
+                if (
+                    carro.x - carro.width / 2 < moneda.x + moneda.radio &&
+                    carro.x + carro.width / 2 > moneda.x - moneda.radio &&
+                    carro.y - carro.height / 2 < moneda.y + moneda.radio &&
+                    carro.y + carro.height / 2 > moneda.y - moneda.radio
+                ) {
+                    monedas.splice(monedas.indexOf(moneda), 1);
+                    puntuacion += 10;
+                }
+            }
+
+            return false;
+        }
+
+        function dibujar() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            dibujarCarro();
+            dibujarObstaculos();
+            dibujarMonedas();
+
+            actualizarObstaculos();
+            actualizarMonedas();
+
+            if (colision()) {
+                alert(`¡Game Over! Puntuación: ${puntuacion}`);
+                reiniciarJuego();
+            }
+
+            requestAnimationFrame(dibujar);
+        }
+
+        function reiniciarJuego() {
+            carro.x = canvas.width / 2;
+            carro.y = canvas.height - 30;
+            obstaculos = [];
+            monedas = [];
+            puntuacion = 0;
+        }
+
+        function generarObstaculo() {
+            const obstaculo = {
+                x: canvas.width + 30,
+                y: Math.random() * canvas.height,
+                width: 30,
+                height: 30
+            };
+
+            obstaculos.push(obstaculo);
+        }
+
+        function generarMoneda() {
+            const moneda = {
+                x: canvas.width + 20,
+                y: Math.random() * canvas.height,
+                radio: 10
+            };
+
+            monedas.push(moneda);
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowUp' && carro.y - carro.height / 2 > 0) {
+                carro.y -= carro.speed;
+            }
+
+            if (e.key === 'ArrowDown' && carro.y + carro.height / 2 < canvas.height) {
+                carro.y += carro.speed;
+            }
+        });
+
+        setInterval(generarObstaculo, 2000);
+        setInterval(generarMoneda, 3000);
+
+        dibujar();
+    </script>
+</body>
+</html>
