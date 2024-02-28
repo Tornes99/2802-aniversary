@@ -7,12 +7,12 @@ let score = 0
 
 
 const candyColors = [
-    'url(../assets/images/juego/atraparpeachcat.gif)',
-    'url(../assets/images/juego/peach-cerdo.gif)',
-    'url(../assets/images/juego/peach-goma-brincos.gif)',
-    'url(../assets/images/juego/peach-goma-carretilla.gif)',
-    'url(../assets/images/juego/besopeachcat.gif)',
-    'url(../assets/images/juego/peach-goma-carro.gif)'
+    'url(2802-aniversary/assets/images/juego/atraparpeachcat.gif)',
+    'url(2802-aniversary/assets/images/juego/peach-cerdo.gif)',
+    'url(2802-aniversary/assets/images/juego/peach-goma-brincos.gif)',
+    'url(2802-aniversary/assets/images/juego/peach-goma-carretilla.gif)',
+    'url(2802-aniversary/assets/images/juego/besopeachcat.gif)',
+    'url(2802-aniversary/assets/images/juego/peach-goma-carro.gif)'
   ]
 
 
