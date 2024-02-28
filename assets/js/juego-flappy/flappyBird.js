@@ -19,10 +19,10 @@ window.addEventListener('keydown', (e) => {
 
 // cargar gif  de perder y finalizar
 const gameOverImage = document.createElement('img');
-gameOverImage.src = '..//assets/images/peach-goma-confetil.gif'; // Cambia 'game_over.gif' con la ruta de tu imagen GIF
+gameOverImage.src = '2802-aniversary/assets/images/peach-goma-confetil.gif'; // Cambia 'game_over.gif' con la ruta de tu imagen GIF
 
 const gameLostImage = document.createElement('img');
-gameLostImage.src = '..//assets/images/peach-cry.gif'; // Cambia 'game_over.gif' con la ruta de tu imagen GIF
+gameLostImage.src = '2802-aniversary/assets/images/peach-cry.gif'; // Cambia 'game_over.gif' con la ruta de tu imagen GIF
 
 const bird = {
     x: 50,
@@ -36,7 +36,7 @@ const bird = {
 };
 
 const background = new Image();
-background.src = '..//assets/images/fondo1.png';
+background.src = '2802-aniversary/assets/images/fondo1.png';
 
 const obstacle = {
     width: 100,
@@ -52,10 +52,10 @@ let gameStarted = false;
 let gameOver = false;
 let gameLost = false;
 
-bird.image.src = '..//assets/images/peach-angel.png';
+bird.image.src = '2802-aniversary/assets/images/peach-angel.png';
 
 // Cambia 'obstacle.png' con la ruta de tu imagen del obstáculo
-obstacle.image.src = '..//assets/images/goma.png';
+obstacle.image.src = '2802-aniversary/assets/images/goma.png';
   
 
 function update() {
